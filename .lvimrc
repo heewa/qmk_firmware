@@ -1,0 +1,6 @@
+set makeprg=qmk\ --no-color\ compile
+
+nnoremap <Leader>y t,v8hy
+nnoremap <Leader>x t,v8hyt,v8hr<Space>
+nnoremap <Leader>p t,v8hp
+nnoremap <Leader>b t,8hr<Space>lvt,r_
