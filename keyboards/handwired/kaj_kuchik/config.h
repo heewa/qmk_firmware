@@ -3,8 +3,8 @@
 
 #include "config_common.h"
 
-#define COMBO_COUNT 4
-#define COMBO_TERM 200
+#define COMBO_COUNT 16
+#define COMBO_TERM 50
 
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200
