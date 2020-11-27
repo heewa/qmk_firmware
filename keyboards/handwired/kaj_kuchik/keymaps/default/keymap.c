@@ -1,5 +1,24 @@
 #include "kb.h"
 
+enum combos {
+    KL_QUOTE,
+    MC_DOT,
+    ZX_SLASH,
+    QW_TICK,
+};
+
+const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM mc_combo[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+    [KL_QUOTE] = COMBO(kl_combo, KC_QUOT),
+    [MC_DOT] = COMBO(mc_combo, KC_DOT),
+    [ZX_SLASH] = COMBO(zx_combo, KC_SLSH),
+    [QW_TICK] = COMBO(qw_combo, KC_GRV),
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	KEYMAP(
@@ -133,7 +152,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
-	keyevent_t event = record->event;
+	//keyevent_t event = record->event;
 
 	switch (id) {
 
