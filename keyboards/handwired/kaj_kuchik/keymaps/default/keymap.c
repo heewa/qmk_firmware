@@ -1,22 +1,48 @@
 #include "kb.h"
 
 enum combos {
+    // Punctuation
     KL_QUOTE,
     MC_DOT,
     ZX_SLASH,
     QW_TICK,
+    AS_SCLN,
+
+    // Brackets
+    DF_LPRN,
+    HJ_RPRN,
+    ER_LBRC,
+    UI_RBRC,
+
+    // +/-
+    CV_MINUS,
+    BN_PLUS,
 };
 
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM mc_combo[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
+const uint16_t PROGMEM df_combo[] = {KC_D, KC_F, COMBO_END};
+const uint16_t PROGMEM hj_combo[] = {KC_H, KC_J, COMBO_END};
+const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     [KL_QUOTE] = COMBO(kl_combo, KC_QUOT),
     [MC_DOT] = COMBO(mc_combo, KC_DOT),
     [ZX_SLASH] = COMBO(zx_combo, KC_SLSH),
     [QW_TICK] = COMBO(qw_combo, KC_GRV),
+    [AS_SCLN] = COMBO(as_combo, KC_SCLN),
+    [DF_LPRN] = COMBO(df_combo, KC_LPRN),
+    [HJ_RPRN] = COMBO(hj_combo, KC_RPRN),
+    [ER_LBRC] = COMBO(er_combo, KC_LBRC),
+    [UI_RBRC] = COMBO(ui_combo, KC_RBRC),
+    [CV_MINUS] = COMBO(cv_combo, KC_MINUS),
+    [BN_PLUS] = COMBO(bn_combo, KC_PLUS),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
