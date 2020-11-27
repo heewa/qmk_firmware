@@ -6,6 +6,9 @@
 #define COMBO_COUNT 4
 #define COMBO_TERM 200
 
+#define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 200
+
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
