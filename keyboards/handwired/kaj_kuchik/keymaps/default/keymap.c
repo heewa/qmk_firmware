@@ -4,15 +4,20 @@ enum combos {
     // Punctuation
     KL_QUOTE,
     MC_DOT,
-    ZX_SLASH,
+    ZX_BSLASH,
     QW_TICK,
-    AS_SCLN,
+    OP_SCLN,
+    AS_SLSH,
 
     // Brackets
     DF_LPRN,
     HJ_RPRN,
     ER_LBRC,
     UI_RBRC,
+    RT_LT,
+    YU_GT,
+    FG_LCBR,
+    FNH_RCBR,
 
     // +/-
     CV_MINUS,
@@ -24,23 +29,33 @@ const uint16_t PROGMEM mc_combo[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
+const uint16_t PROGMEM op_combo[] = {KC_O, KC_P, COMBO_END};
 const uint16_t PROGMEM df_combo[] = {KC_D, KC_F, COMBO_END};
 const uint16_t PROGMEM hj_combo[] = {KC_H, KC_J, COMBO_END};
 const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
 const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM rt_combo[] = {KC_R, KC_T, COMBO_END};
+const uint16_t PROGMEM yu_combo[] = {KC_Y, KC_U, COMBO_END};
+const uint16_t PROGMEM fg_combo[] = {KC_F, KC_G, COMBO_END};
+const uint16_t PROGMEM fnh_combo[] = {KC_DOT, KC_H, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     [KL_QUOTE] = COMBO(kl_combo, KC_QUOT),
     [MC_DOT] = COMBO(mc_combo, KC_DOT),
-    [ZX_SLASH] = COMBO(zx_combo, KC_SLSH),
+    [ZX_BSLASH] = COMBO(zx_combo, KC_BSLASH),
     [QW_TICK] = COMBO(qw_combo, KC_GRV),
-    [AS_SCLN] = COMBO(as_combo, KC_SCLN),
+    [OP_SCLN] = COMBO(op_combo, KC_SCLN),
+    [AS_SLSH] = COMBO(as_combo, KC_SLSH),
     [DF_LPRN] = COMBO(df_combo, KC_LPRN),
     [HJ_RPRN] = COMBO(hj_combo, KC_RPRN),
     [ER_LBRC] = COMBO(er_combo, KC_LBRC),
     [UI_RBRC] = COMBO(ui_combo, KC_RBRC),
+    [RT_LT] = COMBO(rt_combo, KC_LT),
+    [YU_GT] = COMBO(yu_combo, KC_GT),
+    [FG_LCBR] = COMBO(fg_combo, KC_LCBR),
+    [FNH_RCBR] = COMBO(fnh_combo, KC_RCBR),
     [CV_MINUS] = COMBO(cv_combo, KC_MINUS),
     [BN_PLUS] = COMBO(bn_combo, KC_PLUS),
 };
@@ -52,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_A, KC_S, KC_D, KC_F, KC_G, CTL_T(KC_ESC),
 		KC_Z, KC_X, KC_C, KC_V, KC_RGUI,
 		KC_O, KC_P, KC_U, KC_I, LT(1, KC_TAB), KC_Y,
-		KC_K, KC_L, KC_H, KC_J, ALT_T(KC_ENT), KC_NO,
+		KC_K, KC_L, KC_H, KC_J, ALT_T(KC_ENT), LT(2, KC_DOT),
 		KC_M, KC_COMM, KC_B, KC_N, SFT_T(KC_SPC)),
 
 	KEYMAP(
@@ -60,15 +75,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 		KC_9, KC_0, KC_7, KC_8, KC_TRNS, KC_6,
-		KC_UP, KC_RIGHT, KC_LEFT, KC_DOWN, KC_TRANS, KC_TRNS,
-		LGUI(KC_UP), LGUI(KC_RIGTH), LGUI(KC_LEFT), LGUI(KC_DOWN), KC_TRNS),
+		KC_UP, KC_RIGHT, KC_LEFT, KC_DOWN, KC_TRNS, KC_TRNS,
+		LGUI(KC_UP), LGUI(KC_RIGHT), LGUI(KC_LEFT), LGUI(KC_DOWN), KC_TRNS),
 
 	KEYMAP(
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_TRNS,
+		KC_F11, KC_F12, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+		KC_F9, KC_F10, KC_F7, KC_F8, KC_TRNS, KC_F6,
+		KC_PGUP, KC_END, KC_HOME, KC_PGDN, KC_TRNS, KC_TRNS,
 		KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
 	KEYMAP(
