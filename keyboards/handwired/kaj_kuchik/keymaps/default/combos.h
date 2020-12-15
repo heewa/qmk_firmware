@@ -17,7 +17,7 @@ enum combos {
     RT_LT,
     YU_GT,
     FG_LCBR,
-    FNH_RCBR,
+    SCH_RCBR,
 
     // +/-
     CV_MINUS,
@@ -37,7 +37,7 @@ const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM rt_combo[] = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM yu_combo[] = {KC_Y, KC_U, COMBO_END};
 const uint16_t PROGMEM fg_combo[] = {KC_F, KC_G, COMBO_END};
-const uint16_t PROGMEM fnh_combo[] = {KC_DOT, KC_H, COMBO_END};
+const uint16_t PROGMEM sch_combo[] = {KC_COLN, KC_H, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
 
@@ -55,7 +55,7 @@ combo_t key_combos[COMBO_COUNT] = {
     [RT_LT] = COMBO(rt_combo, KC_LT),
     [YU_GT] = COMBO(yu_combo, KC_GT),
     [FG_LCBR] = COMBO(fg_combo, KC_LCBR),
-    [FNH_RCBR] = COMBO(fnh_combo, KC_RCBR),
+    [SCH_RCBR] = COMBO(sch_combo, KC_RCBR),
     [CV_MINUS] = COMBO(cv_combo, KC_MINUS),
     [BN_PLUS] = COMBO(bn_combo, KC_PLUS),
 };

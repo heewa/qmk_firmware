@@ -8,8 +8,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_Q, KC_E, KC_T, KC_U, KC_O, CTL_T(KC_ESC),
 		KC_W, KC_R, KC_Y, KC_I, KC_P, KC_BSPC,
 		KC_A, KC_D, KC_G, KC_H, KC_K, LT(1, KC_TAB),
-		KC_S, KC_F, KC_NO, KC_J, KC_L, KC_RGUI,
-		KC_Z, KC_C, KC_B, KC_M, SFT_T(KC_SPC),
+		KC_S, KC_F, LSFT(KC_SCLN), KC_J, KC_L, KC_RGUI,
+		LT(2, KC_Z), KC_C, KC_B, KC_M, SFT_T(KC_SPC),
 		KC_X, KC_V, KC_N, KC_COMM, ALT_T(KC_ENT)),
 
 	KEYMAP(
