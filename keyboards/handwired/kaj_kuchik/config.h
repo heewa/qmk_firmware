@@ -4,7 +4,7 @@
 #include "config_common.h"
 
 #define COMBO_COUNT 16
-#define COMBO_TERM 50
+#define COMBO_TERM 25
 
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 200
