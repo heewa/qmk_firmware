@@ -111,12 +111,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 ____,
                  ____,
                   ____,
-        ____,
-          ____,
-          ____,
-        ____,
-          ____,
-          ____),
+        KC_BSPC,
+          KC_RGUI,
+          LCTL(KC_ESC),
+        LSFT(KC_SPC),
+          KC_TAB,
+          LALT(KC_ENT)),
 
 };
 
