@@ -4,7 +4,7 @@ enum combos {
     // Punctuation
     KL_QUOTE,
     MC_DOT,
-    ZX_BSLASH,
+    XC_BSLASH,
     QW_TICK,
     OP_SCLN,
     NM_SLSH,
@@ -26,7 +26,7 @@ enum combos {
 
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM mc_combo[] = {KC_M, KC_COMM, COMBO_END};
-const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
 const uint16_t PROGMEM op_combo[] = {KC_O, KC_P, COMBO_END};
@@ -45,7 +45,7 @@ const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     [KL_QUOTE] = COMBO(kl_combo, KC_QUOT),
     [MC_DOT] = COMBO(mc_combo, KC_DOT),
-    [ZX_BSLASH] = COMBO(zx_combo, KC_BSLASH),
+    [XC_BSLASH] = COMBO(xc_combo, KC_BSLASH),
     [QW_TICK] = COMBO(qw_combo, KC_GRV),
     [OP_SCLN] = COMBO(op_combo, KC_SCLN),
     [NM_SLSH] = COMBO(nm_combo, KC_SLSH),
