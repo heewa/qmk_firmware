@@ -7,7 +7,7 @@ enum combos {
     ZX_BSLASH,
     QW_TICK,
     OP_SCLN,
-    AS_SLSH,
+    NM_SLSH,
 
     // Brackets
     DF_LPRN,
@@ -21,7 +21,7 @@ enum combos {
 
     // +/-
     CV_MINUS,
-    BN_PLUS,
+    BN_EQL,
 };
 
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
@@ -40,6 +40,7 @@ const uint16_t PROGMEM fg_combo[] = {KC_F, KC_G, COMBO_END};
 const uint16_t PROGMEM sch_combo[] = {KC_COLN, KC_H, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
+const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     [KL_QUOTE] = COMBO(kl_combo, KC_QUOT),
@@ -47,7 +48,7 @@ combo_t key_combos[COMBO_COUNT] = {
     [ZX_BSLASH] = COMBO(zx_combo, KC_BSLASH),
     [QW_TICK] = COMBO(qw_combo, KC_GRV),
     [OP_SCLN] = COMBO(op_combo, KC_SCLN),
-    [AS_SLSH] = COMBO(as_combo, KC_SLSH),
+    [NM_SLSH] = COMBO(nm_combo, KC_SLSH),
     [DF_LPRN] = COMBO(df_combo, KC_LPRN),
     [HJ_RPRN] = COMBO(hj_combo, KC_RPRN),
     [ER_LBRC] = COMBO(er_combo, KC_LBRC),
@@ -57,5 +58,5 @@ combo_t key_combos[COMBO_COUNT] = {
     [FG_LCBR] = COMBO(fg_combo, KC_LCBR),
     [SCH_RCBR] = COMBO(sch_combo, KC_RCBR),
     [CV_MINUS] = COMBO(cv_combo, KC_MINUS),
-    [BN_PLUS] = COMBO(bn_combo, KC_PLUS),
+    [BN_EQL] = COMBO(bn_combo, KC_EQL),
 };
