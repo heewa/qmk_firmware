@@ -1,25 +1,11 @@
 #include "kb.h"
 
-enum {
-    TD_RESET,
-};
-
-void handle_reset_tap(qk_tap_dance_state_t *state, void *user_data) {
-    if (state->count >= 4) {
-        reset_keyboard();
-        reset_tap_dance(state);
-    } else {
-        tap_code(KC_Z);
-    }
-}
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_RESET] = ACTION_TAP_DANCE_FN(handle_reset_tap),
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    // Layer 0
+    // Leave this first
+    LAYER_SELECT,
+
+    // Layer 1
 	KEYMAP(
 		KC_Q,
          KC_W,
@@ -27,6 +13,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_R,
          KC_T,
           KC_Y),
+
+    // Layer 2
+	KEYMAP(
+		KC_A,
+         KC_S,
+          KC_D,
+        KC_F,
+         KC_G,
+          KC_H),
+
+    // Layer 3
+	KEYMAP(
+		KC_Z,
+         KC_X,
+          KC_C,
+        KC_V,
+         KC_B,
+          KC_N),
+
+    // Layer 4
+	KEYMAP(
+		KC_Z,
+         KC_X,
+          KC_C,
+        KC_V,
+         KC_B,
+          KC_N),
+
+    // Layer 5
+	KEYMAP(
+		KC_Z,
+         KC_X,
+          KC_C,
+        KC_V,
+         KC_B,
+          KC_N),
+
+    // Layer 6
+	KEYMAP(
+		KC_Z,
+         KC_X,
+          KC_C,
+        KC_V,
+         KC_B,
+          KC_N),
 
 };
 

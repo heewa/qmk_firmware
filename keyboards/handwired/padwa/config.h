@@ -6,7 +6,7 @@
 #define COMBO_TERM 20
 
 #define TAPPING_FORCE_HOLD
-#define TAPPING_TERM 100
+#define TAPPING_TERM 200
 #define IGNORE_MOD_TAP_INTERRUPT
 
 /* USB Device descriptor parameter */
