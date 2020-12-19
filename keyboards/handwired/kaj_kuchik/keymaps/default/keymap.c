@@ -4,6 +4,23 @@
 
 #define ____ KC_TRNS
 
+enum {
+    TD_RESET,
+};
+
+void handle_reset_tap(qk_tap_dance_state_t *state, void *user_data) {
+    if (state->count >= 4) {
+        reset_keyboard();
+        reset_tap_dance(state);
+    } else {
+        tap_code(KC_Z);
+    }
+}
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [TD_RESET] = ACTION_TAP_DANCE_FN(handle_reset_tap),
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer 0
@@ -65,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_DOWN,
                    KC_UP,
                     KC_RIGHT,
-		____,
+		TD(TD_RESET),
          ____,
           ____,
            ____,
