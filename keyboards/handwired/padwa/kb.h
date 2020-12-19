@@ -25,7 +25,7 @@ void handle_reset_tap(qk_tap_dance_state_t *state, void *user_data) {
         reset_keyboard();
         reset_tap_dance(state);
     } else {
-        tap_code(KC_Z);
+        layer_move(7);
     }
 }
 
