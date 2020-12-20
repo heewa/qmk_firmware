@@ -13,7 +13,7 @@ void handle_reset_tap(qk_tap_dance_state_t *state, void *user_data) {
         reset_keyboard();
         reset_tap_dance(state);
     } else {
-        tap_code(KC_Z);
+        tap_code(KC_X);
     }
 }
 
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                KC_B,
                 KC_N,
                  KC_M,
-                  LT(3, KC_COMM),
+                  KC_COMM,
         KC_BSPC,
           KC_RGUI,
           CTL_T(KC_ESC),
@@ -62,17 +62,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer 1
 	KEYMAP(
-		LSFT(KC_1),
-         LSFT(KC_2),
-          LSFT(KC_3),
-           LSFT(KC_4),
-            LSFT(KC_5),
-                LSFT(KC_6),
-                 LSFT(KC_7),
-                  LSFT(KC_8),
-                   LSFT(KC_9),
-                    LSFT(KC_0),
-		LSFT(KC_SLSH),
+		KC_1,
+         KC_2,
+          KC_3,
+           KC_4,
+            KC_5,
+                KC_6,
+                 KC_7,
+                  KC_8,
+                   KC_9,
+                    KC_0,
+		KC_SLSH,
          ____,
           ____,
            ____,
@@ -82,8 +82,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_DOWN,
                    KC_UP,
                     KC_RIGHT,
-		TD(TD_RESET),
-         ____,
+        LT(3, KC_Z),
+		 TD(TD_RESET),
           ____,
            ____,
                 KC_HOME,
@@ -100,6 +100,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer 2
 	KEYMAP(
+		____,
+         ____,
+          ____,
+           ____,
+            ____,
+                ____,
+                 KC_KP_7,
+                  KC_KP_8,
+                   KC_KP_9,
+                    ____,
+		____,
+         KC__VOLDOWN,
+          KC__MUTE,
+           KC__VOLUP,
+            ____,
+                KC_KP_0,
+                 KC_KP_4,
+                  KC_KP_5,
+                   KC_KP_6,
+                    KC_KP_0,
+		____,
+         KC_MPRV,
+          KC_MPLY,
+           KC_MNXT,
+               KC_KP_1,
+                KC_KP_2,
+                 KC_KP_3,
+                  ____,
+        KC_BSPC,
+          KC_RGUI,
+          LCTL(KC_ESC),
+        LSFT(KC_SPC),
+          LT(3, KC_TAB),
+          LALT(KC_ENT)),
+
+    // Layer 3
+	KEYMAP(
 		KC_F1,
          KC_F2,
           KC_F3,
@@ -111,9 +148,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    KC_F9,
                     KC_F10,
 		____,
-         KC__VOLDOWN,
-          KC__MUTE,
-           KC__VOLUP,
+         ____,
+          ____,
+           ____,
             ____,
                 ____,
                  ____,
@@ -121,49 +158,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    KC_F11,
                     KC_F12,
 		____,
-         KC_MPRV,
-          KC_MPLY,
-           KC_MNXT,
+         ____,
+          ____,
+           ____,
                ____,
                 ____,
                  ____,
-                  ____,
-        KC_BSPC,
-          KC_RGUI,
-          LCTL(KC_ESC),
-        LSFT(KC_SPC),
-          KC_TAB,
-          LALT(KC_ENT)),
-
-    // Layer 3
-	KEYMAP(
-		____,
-         ____,
-          ____,
-           ____,
-            ____,
-                ____,
-                 KC_7,
-                  KC_8,
-                   KC_9,
-                    ____,
-		____,
-         ____,
-          ____,
-           ____,
-            ____,
-                KC_0,
-                 KC_4,
-                  KC_5,
-                   KC_6,
-                    KC_0,
-		____,
-         ____,
-          ____,
-           ____,
-               KC_1,
-                KC_2,
-                 KC_3,
                   ____,
         ____,
           ____,
@@ -190,11 +190,20 @@ void matrix_scan_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    /*
     // handle reverse shifted keys
     uint8_t mod_state = get_mods();
     switch (keycode) {
-        case KC_SCLN:
+        case KC_1:
+        case KC_2:
+        case KC_3:
+        case KC_4:
+        case KC_5:
+        case KC_6:
+        case KC_7:
+        case KC_8:
+        case KC_9:
+        case KC_0:
+
             if (record->event.pressed) {
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
@@ -209,7 +218,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
             break;
     }
-    */
 
 	return true;
 }
