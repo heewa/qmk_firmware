@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_8,
                    KC_9,
                     KC_0,
-		KC_SLSH,
+		LSFT(KC_SLSH),
          ____,
           ____,
            ____,
