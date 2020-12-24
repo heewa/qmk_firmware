@@ -14,17 +14,8 @@
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    HeewaBarfchin
-#define PRODUCT         KajKuchik
+#define PRODUCT         Kaj34
 #define DESCRIPTION     keyboard
-
-/* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 6
-
-/* key matrix pins */
-#define MATRIX_ROW_PINS { B1, C6, B2, B5, E6, B4 }
-#define MATRIX_COL_PINS { F6, F7, B3, D7, D4, B6 }
-#define UNUSED_PINS
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -51,7 +42,6 @@
 
 /* prevent stuck modifiers */
 #define PREVENT_STUCK_MODIFIERS
-
 
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
