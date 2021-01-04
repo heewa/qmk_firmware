@@ -100,8 +100,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer 2
 	KEYMAP(
-		____,
-         ____,
+		LCA(KC_1),
+         LCA(KC_2),
           ____,
            ____,
             ____,
