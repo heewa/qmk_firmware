@@ -1,4 +1,6 @@
-#include "kb.h"
+#include "analog.c"
+#include "joywa.h"
+#include "print.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -25,6 +27,14 @@ void matrix_scan_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    dprintf(
+        "x (%d): %4d, y (%d): %4d\n",
+        J1_X_PIN,
+        analogRead(J1_X_PIN),
+        J1_Y_PIN,
+        analogRead(J1_Y_PIN)
+    );
+
 	return true;
 }
 
