@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           KC_D,
            KC_F,
             KC_G,
-                LSFT(KC_SCLN),
+                KC_DOT,
                  KC_H,
                   KC_J,
                    KC_K,
