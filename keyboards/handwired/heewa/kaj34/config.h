@@ -9,14 +9,7 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xBAAF
-#define PRODUCT_ID      0x4200
-#define MANUFACTURER    HeewaBarfchin
-#define PRODUCT         Kaj34
 #define DESCRIPTION     keyboard
-
-/* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
 
 /* number of backlight levels */
 
