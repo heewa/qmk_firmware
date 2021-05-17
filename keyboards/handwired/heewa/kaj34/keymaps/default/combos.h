@@ -36,5 +36,5 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(fg_combo, KC_LCBR),
     COMBO(sch_combo, KC_RCBR),
     COMBO(cv_combo, KC_MINUS),
-    COMBO(bn_combo, KC_DOT),
+    COMBO(bn_combo, LSFT(KC_SCLN)),
 };
