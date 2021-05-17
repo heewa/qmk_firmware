@@ -1,0 +1,70 @@
+{
+  "keyboard_name": "Kaj34",
+  "url": "",
+  "manufacturer": "Heewa Barfchin",
+  "maintainer": "heewa",
+  "width": 12,
+  "height": 3,
+  "processor": "atmega32u4",
+  "bootloader": "caterina",
+  "diode_direction": "COL2ROW",
+  "usb": {
+    "vid": "0xBAAF",
+    "pid": "0x4200"
+  },
+  "features": {
+    "audio": false,
+    "backlight": false,
+    "bootmagic_lite": true,
+    "combo": true,
+    "command": false,
+    "console": false,
+    "extrakey": true,
+    "mousekey": true,
+    "nkro": true,
+    "rgblight": false,
+    "sleep_led": false,
+    "tap_dance": true
+  },
+  "layouts": {
+    "LAYOUT_ortho_3x12": {
+      "key_count": 34,
+      "layout": [
+        {"label": "q", "x": 0, "y": 0},
+        {"label": "w", "x": 1, "y": 0},
+        {"label": "e", "x": 2, "y": 0},
+        {"label": "r", "x": 3, "y": 0},
+        {"label": "t", "x": 4, "y": 0},
+        {"label": "y", "x": 5, "y": 0},
+        {"label": "u", "x": 6, "y": 0},
+        {"label": "i", "x": 7, "y": 0},
+        {"label": "o", "x": 8, "y": 0},
+        {"label": "p", "x": 9, "y": 0},
+        {"label": "a", "x": 0, "y": 1},
+        {"label": "s", "x": 1, "y": 1},
+        {"label": "d", "x": 2, "y": 1},
+        {"label": "f", "x": 3, "y": 1},
+        {"label": "g", "x": 4, "y": 1},
+        {"label": ".", "x": 5, "y": 1},
+        {"label": "h", "x": 6, "y": 1},
+        {"label": "j", "x": 7, "y": 1},
+        {"label": "k", "x": 8, "y": 1},
+        {"label": "l", "x": 9, "y": 1},
+        {"label": "z", "x": 0, "y": 2},
+        {"label": "x", "x": 1, "y": 2},
+        {"label": "c", "x": 2, "y": 2},
+        {"label": "v", "x": 3, "y": 2},
+        {"label": "b", "x": 6, "y": 2},
+        {"label": "n", "x": 7, "y": 2},
+        {"label": "m", "x": 8, "y": 2},
+        {"label": ",", "x": 9, "y": 2},
+        {"label": "Backspace8", "x": 10, "y": 0},
+        {"label": "Super", "x": 10, "y": 1},
+        {"label": "Esc", "x": 10, "y": 2},
+        {"label": "Tab", "x": 11, "y": 0},
+        {"label": "Enter", "x": 11, "y": 1},
+        {"label": "Space", "x": 11, "y": 2}
+      ]
+    }
+  }
+}
