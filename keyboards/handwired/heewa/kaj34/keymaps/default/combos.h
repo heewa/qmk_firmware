@@ -20,6 +20,7 @@ const uint16_t PROGMEM doth_combo[] = {KC_DOT, KC_H, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
 const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM kp_23_combo[] = {KC_KP_2, KC_KP_3, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(jk_combo, KC_QUOT),
@@ -28,6 +29,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(qw_combo, KC_GRV),
     COMBO(op_combo, KC_SCLN),
     COMBO(nm_combo, KC_SLSH),
+    COMBO(kp_23_combo, KC_SLSH),
     COMBO(df_combo, KC_LPRN),
     COMBO(hj_combo, KC_RPRN),
     COMBO(er_combo, KC_LBRC),
