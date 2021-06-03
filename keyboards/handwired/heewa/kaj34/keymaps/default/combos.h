@@ -15,7 +15,6 @@ const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM rt_combo[] = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM yu_combo[] = {KC_Y, KC_U, COMBO_END};
 const uint16_t PROGMEM fg_combo[] = {KC_F, KC_G, COMBO_END};
-//const uint16_t PROGMEM sch_combo[] = {KC_COLN, KC_H, COMBO_END};
 const uint16_t PROGMEM doth_combo[] = {KC_DOT, KC_H, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
@@ -23,21 +22,32 @@ const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM kp_23_combo[] = {KC_KP_2, KC_KP_3, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(jk_combo, KC_QUOT),
-    COMBO(sd_combo, KC_EQL),
-    COMBO(xc_combo, KC_BSLASH),
+    // Left Row 1
     COMBO(qw_combo, KC_GRV),
+    COMBO(er_combo, KC_LBRC),
+    COMBO(rt_combo, KC_LT),
+
+    // Right Row 1
+    COMBO(yu_combo, KC_GT),
+    COMBO(ui_combo, KC_RBRC),
     COMBO(op_combo, KC_SCLN),
+
+    // Left Row 2
+    COMBO(sd_combo, KC_EQL),
+    COMBO(df_combo, KC_LPRN),
+    COMBO(fg_combo, KC_LCBR),
+
+    // Right Row 2
+    COMBO(doth_combo, KC_RCBR),
+    COMBO(hj_combo, KC_RPRN),
+    COMBO(jk_combo, KC_QUOT),
+
+    // Left Row 3
+    COMBO(xc_combo, KC_BSLASH),
+    COMBO(cv_combo, KC_MINUS),
+
+    // Right Row 3
+    COMBO(bn_combo, LSFT(KC_SCLN)),
     COMBO(nm_combo, KC_SLSH),
     COMBO(kp_23_combo, KC_SLSH),
-    COMBO(df_combo, KC_LPRN),
-    COMBO(hj_combo, KC_RPRN),
-    COMBO(er_combo, KC_LBRC),
-    COMBO(ui_combo, KC_RBRC),
-    COMBO(rt_combo, KC_LT),
-    COMBO(yu_combo, KC_GT),
-    COMBO(fg_combo, KC_LCBR),
-    COMBO(doth_combo, KC_RCBR),
-    COMBO(cv_combo, KC_MINUS),
-    COMBO(bn_combo, LSFT(KC_SCLN)),
 };
