@@ -21,10 +21,19 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_RESET] = ACTION_TAP_DANCE_FN(handle_reset_tap),
 };
 
+enum layers {
+    _LAYOUT_QWERTY,
+    _LAYOUT_MOD_1,
+    _LAYOUT_MOD_2,
+
+    _NUMPAD,
+    _FN,
+    _F_KEYS,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    // Layer 0
-	KEYMAP(
+	[_LAYOUT_QWERTY] = KEYMAP(
 		KC_Q,
          KC_W,
           KC_E,
@@ -45,23 +54,94 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_J,
                    KC_K,
                     KC_L,
-		LT(1, KC_Z),
+		LT(_NUMPAD, KC_Z),
          KC_X,
           KC_C,
            KC_V,
                KC_B,
                 KC_N,
                  KC_M,
-                  LT(3, KC_COMM),
+                  LT(_F_KEYS, KC_COMM),
         KC_BSPC,
           KC_RGUI,
           CTL_T(KC_ESC),
         SFT_T(KC_SPC),
-          LT(2, KC_TAB),
+          LT(_FN, KC_TAB),
           ALT_T(KC_ENT)),
 
-    // Layer 1
-	KEYMAP(
+	[_LAYOUT_MOD_1] = KEYMAP(
+		____,
+         ____,
+          KC_D,
+           ____,
+            KC_V,
+                ____,
+                 ____,
+                  ____,
+                   ____,
+                    ____,
+		____,
+         ____,
+          KC_E,
+           KC_T,
+            ____,
+                ____,
+                 ____,
+                  ____,
+                   ____,
+                    ____,
+		____,
+         ____,
+          ____,
+           KC_F,
+               ____,
+                ____,
+                 ____,
+                  ____,
+        ____,
+          ____,
+          ____,
+        ____,
+          ____,
+          ____),
+
+	[_LAYOUT_MOD_2] = KEYMAP(
+		____,
+         ____,
+          ____,
+           ____,
+            ____,
+                ____,
+                 ____,
+                  KC_L,
+                   KC_K,
+                    ____,
+		____,
+         ____,
+          ____,
+           ____,
+            ____,
+                ____,
+                 ____,
+                  KC_N,
+                   KC_O,
+                    KC_I,
+		____,
+         ____,
+          ____,
+           ____,
+               ____,
+                KC_J,
+                 ____,
+                  ____,
+        ____,
+          ____,
+          ____,
+        ____,
+          ____,
+          ____),
+
+	[_NUMPAD] = KEYMAP(
 		LCA(KC_1),
          LCA(KC_2),
           ____,
@@ -97,8 +177,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		  ____,
 		  ____),
 
-    // Layer 2
-	KEYMAP(
+	[_FN] = KEYMAP(
 		KC_1,
          KC_2,
           KC_3,
@@ -119,7 +198,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                   KC_DOWN,
                    KC_UP,
                     KC_RIGHT,
-        LT(3, KC_Z),
+        ____,
 		 TD(TD_RESET),
           ____,
            ____,
@@ -135,8 +214,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           ____,
           ____),
 
-    // Layer 3
-	KEYMAP(
+	[_F_KEYS] = KEYMAP(
 		KC_F1,
          KC_F2,
           KC_F3,
@@ -158,8 +236,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    KC_MS_BTN2,
                     ____,
 		____,
-         ____,
-          ____,
+         TG(_LAYOUT_MOD_1),
+          TG(_LAYOUT_MOD_2),
            KC_MS_WH_DOWN,
                KC_MS_LEFT,
                 KC_MS_DOWN,
