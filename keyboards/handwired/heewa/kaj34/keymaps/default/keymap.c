@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
           KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,
         KC_DOT,   KC_H,   KC_J,   KC_K,   KC_L,
-          KC_B,   KC_N,   KC_M, _CMA_F,
+                  KC_B,   KC_N,   KC_M, _CMA_F,
 
               KC_BSPC,         KC_RGUI,  CTL_T(KC_ESC),
         SFT_T(KC_SPC), LT(_FN, KC_TAB), ALT_T(KC_ENT)),
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         ______, ______, ______, ______, ______,
         ______, ______, ______, ______, ______,
-        ______, ______, ______, ______,
+                ______, ______, ______, ______,
 
         ______, ______, ______,
         ______, ______, ______),
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         ______, ______,   KC_L,   KC_K, ______,
         ______, ______,   KC_N,   KC_O,   KC_I,
-        ______,   KC_J, ______, ______,
+                ______,   KC_J, ______, ______,
 
         ______, ______, ______,
         ______, ______, ______),
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         KC_MINUS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PLUS,
         KC_COMMA, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_0,
-         KC_KP_1, KC_KP_2, KC_KP_3,  KC_DOT,
+                  KC_KP_1, KC_KP_2, KC_KP_3,  KC_DOT,
 
 		______, ______, ______,
 		______, ______, ______),
@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
            KC_6,    KC_7,    KC_8,   KC_9,     KC_0,
         KC_SCLN, KC_LEFT, KC_DOWN,  KC_UP, KC_RIGHT,
-        KC_HOME, KC_PGDN, KC_PGUP, KC_END,
+                 KC_HOME, KC_PGDN, KC_PGUP, KC_END,
 
                KC_DEL, ______, ______,
         SFT_T(KC_INS), ______, ______),
@@ -111,9 +111,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_F11, KC_F12, _MWH_L, _MWH_U, _MWH_R,
 		______, _LAY_1, _LAY_2, _MWH_D,
 
-             KC_F6,      KC_F7,       KC_F8,      KC_F9, KC_F10,
-        KC_MS_BTN3, KC_MS_BTN1,    KC_MS_UP, KC_MS_BTN2, ______,
-        KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,     ______,
+             KC_F6,      KC_F7,      KC_F8,       KC_F9, KC_F10,
+        KC_MS_BTN3, KC_MS_BTN1,   KC_MS_UP,  KC_MS_BTN2, ______,
+                    KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, ______,
 
               ______, ______,  LCTL(KC_ESC),
         LSFT(KC_SPC), ______, LALT(KC_ENT)),
