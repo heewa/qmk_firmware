@@ -24,6 +24,7 @@ enum layers {
     _LAYOUT_MOD_1,
     _LAYOUT_MOD_2,
 
+    _DUAL_NUMPAD,
     _NUMPAD,
     _FN,
     _F_KEYS,
@@ -35,6 +36,7 @@ enum layers {
 #define _LAY_1 ( TG(_LAYOUT_MOD_1) )
 #define _LAY_2 ( TG(_LAYOUT_MOD_2) )
 
+#define _BSNUM ( LT(_DUAL_NUMPAD, KC_BSPC) )
 #define _Z_NUM ( LT(_NUMPAD, KC_Z) )
 #define _CMA_F ( LT(_F_KEYS, KC_COMM) )
 #define _QSTMK ( LSFT(KC_SLSH) )
@@ -55,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_DOT,   KC_H,   KC_J,   KC_K,   KC_L,
                   KC_B,   KC_N,   KC_M, _CMA_F,
 
-              KC_BSPC,         KC_RGUI,  CTL_T(KC_ESC),
+        _BSNUM, KC_RGUI, CTL_T(KC_ESC),
         SFT_T(KC_SPC), LT(_FN, KC_TAB), ALT_T(KC_ENT)),
 
 	[_LAYOUT_MOD_1] = KEYMAP(
@@ -81,6 +83,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         ______, ______, ______,
         ______, ______, ______),
+
+	[_DUAL_NUMPAD] = KEYMAP(
+        KC_MINUS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PLUS,
+          KC_DOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_0,
+         KC_COMM, KC_KP_1, KC_KP_2, KC_KP_3,
+
+        KC_MINUS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PLUS,
+          KC_DOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_0,
+                  KC_KP_1, KC_KP_2, KC_KP_3,  ______,
+
+		______, ______, ______,
+		______, ______, ______),
 
 	[_NUMPAD] = KEYMAP(
 		LCA(KC_1),   LCA(KC_2),   ______,    ______, ______,
