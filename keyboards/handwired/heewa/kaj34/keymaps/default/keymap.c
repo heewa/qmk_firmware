@@ -149,6 +149,18 @@ void matrix_init_user(void) {
 void matrix_scan_user(void) {
 }
 
+bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Allow tap-hold to input many of these:
+        case _BSNUM:
+            return false;
+
+        // Use hold for everything else
+        default:
+            return true;
+    }
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // handle reverse shifted keys
     uint8_t mod_state = get_mods();
