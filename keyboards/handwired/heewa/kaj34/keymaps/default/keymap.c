@@ -1,5 +1,8 @@
+#pragma once
+
 #include "kb.h"
 
+#include "config.h"
 #include "combos.h"
 
 enum {
@@ -17,17 +20,6 @@ void handle_reset_tap(qk_tap_dance_state_t *state, void *user_data) {
 
 qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_RESET] = ACTION_TAP_DANCE_FN(handle_reset_tap),
-};
-
-enum layers {
-    _LAYOUT_QWERTY,
-    _LAYOUT_MOD_1,
-    _LAYOUT_MOD_2,
-
-    _DUAL_NUMPAD,
-    _NUMPAD,
-    _FN,
-    _F_KEYS,
 };
 
 #define ______ KC_TRNS
