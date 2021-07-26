@@ -1,3 +1,5 @@
+#pragma once
+
 #include "kb.h"
 
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
