@@ -4,23 +4,7 @@
 
 #include "config.h"
 #include "combos.h"
-
-enum {
-    TD_RESET,
-};
-
-void handle_reset_tap(qk_tap_dance_state_t *state, void *user_data) {
-    if (state->count >= 4) {
-        reset_keyboard();
-        reset_tap_dance(state);
-    } else {
-        tap_code(KC_X);
-    }
-}
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_RESET] = ACTION_TAP_DANCE_FN(handle_reset_tap),
-};
+#include "tapdance.h"
 
 #define ______ KC_TRNS
 
@@ -28,7 +12,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define _LAY_1 ( TG(_LAYOUT_MOD_1) )
 #define _LAY_2 ( TG(_LAYOUT_MOD_2) )
 
-#define _BSNUM ( LT(_DUAL_NUMPAD, KC_BSPC) )
+//#define _BSNUM ( LT(_DUAL_NUMPAD, KC_BSPC) )
+//#define _BSNUM ( TD(TD_BSPC) )
+#define _BSNUM ( KC_BSPC )
 #define _Z_NUM ( LT(_NUMPAD, KC_Z) )
 #define _CMA_F ( LT(_F_KEYS, KC_COMM) )
 #define _QSTMK ( LSFT(KC_SLSH) )
