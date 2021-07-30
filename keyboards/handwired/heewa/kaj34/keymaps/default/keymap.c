@@ -1,5 +1,3 @@
-#pragma once
-
 #include "kb.h"
 
 #include "config.h"
@@ -79,9 +77,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	  	   ______, KC__VOLDOWN, KC__MUTE, KC__VOLUP, ______,
 		   ______,     KC_MPRV,  KC_MPLY,   KC_MNXT,
 
-        KC_MINUS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PLUS,
-          KC_DOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_0,
-                  KC_KP_1, KC_KP_2, KC_KP_3,  ______,
+        KC_MINUS, KC_7, KC_8, KC_9, KC_PLUS,
+          KC_DOT, KC_4, KC_5, KC_6, KC_0,
+                  KC_1, KC_2, KC_3,  ______,
 
 		______, ______, ______,
 		______, ______, ______),
@@ -135,7 +133,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_9:
         case KC_0:
 
-            if (record->event.pressed) {
+            if (record->event.pressed && get_highest_layer(layer_state) == _FN) {
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
                 } else {
