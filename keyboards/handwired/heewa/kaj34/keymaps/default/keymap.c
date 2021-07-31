@@ -14,6 +14,7 @@
 //#define _BSNUM ( TD(TD_BSPC) )
 #define _BSNUM ( KC_BSPC )
 #define _Z_NUM ( LT(_NUMPAD, KC_Z) )
+#define _X_SGL ( LT(_SGL, KC_X) )
 #define _CMA_F ( LT(_F_KEYS, KC_COMM) )
 #define _QSTMK ( LSFT(KC_SLSH) )
 
@@ -27,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_LAYOUT_QWERTY] = KEYMAP(
 		  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,
 		  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,
-		_Z_NUM,   KC_X,   KC_C,   KC_V,
+		_Z_NUM, _X_SGL,   KC_C,   KC_V,
 
           KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,
         KC_DOT,   KC_H,   KC_J,   KC_K,   KC_L,
@@ -108,6 +109,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               ______, ______,  LCTL(KC_ESC),
         LSFT(KC_SPC), ______, LALT(KC_ENT)),
 
+
+	[_SGL] = KEYMAP(
+		______, ______, ______, ______, ______,
+		______, ______, ______, ______, ______,
+		______, ______, ______, ______,
+
+        ______, ______, ______, ______, ______,
+        ______, ______, ______, ______, ______,
+                ______, ______, ______, ______,
+
+        KC_BSPC, ______, KC_ESC,
+         KC_SPC, KC_TAB, KC_ENT),
 };
 
 /*

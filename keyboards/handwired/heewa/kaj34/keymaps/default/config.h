@@ -11,4 +11,5 @@ enum layers {
     _NUMPAD,
     _FN,
     _F_KEYS,
+    _SGL,
 };
