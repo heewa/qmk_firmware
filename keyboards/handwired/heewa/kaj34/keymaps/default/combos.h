@@ -38,6 +38,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(op_combo, LSFT(KC_BSLASH)),
 
     // Left Row 2
+    COMBO(as_combo, LSFT(KC_GRV)),
     COMBO(sd_combo, KC_EQL),
     COMBO(df_combo, KC_LPRN),
     COMBO(fg_combo, KC_LCBR),
