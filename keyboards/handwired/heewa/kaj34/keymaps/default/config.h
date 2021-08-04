@@ -1,6 +1,6 @@
 #pragma once
 
-#define COMBO_COUNT 19
+#define COMBO_COUNT 20
 
 enum layers {
     _LAYOUT_QWERTY,

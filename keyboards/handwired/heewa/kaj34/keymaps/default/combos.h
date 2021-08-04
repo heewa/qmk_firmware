@@ -13,6 +13,7 @@ const uint16_t PROGMEM hj_combo[] = {KC_H, KC_J, COMBO_END};
 const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
 const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM io_combo[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM rt_combo[] = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM yu_combo[] = {KC_Y, KC_U, COMBO_END};
 const uint16_t PROGMEM fg_combo[] = {KC_F, KC_G, COMBO_END};
@@ -33,7 +34,8 @@ combo_t key_combos[COMBO_COUNT] = {
     // Right Row 1
     COMBO(yu_combo, KC_GT),
     COMBO(ui_combo, KC_RBRC),
-    COMBO(op_combo, KC_BSLASH),
+    COMBO(io_combo, KC_BSLASH),
+    COMBO(op_combo, LSFT(KC_BSLASH)),
 
     // Left Row 2
     COMBO(sd_combo, KC_EQL),
