@@ -7,14 +7,16 @@
 #define ______ KC_TRNS
 
 #define _RESET ( TD(TD_RESET) )
-#define _LAY_1 ( TG(_LAYOUT_MOD_1) )
-#define _LAY_2 ( TG(_LAYOUT_MOD_2) )
+//#define _LAY_1 ( TG(_LAYOUT_MOD_1) )
+#define _LAY_1 ( ______ )
+//#define _LAY_2 ( TG(_LAYOUT_MOD_2) )
+#define _LAY_2 ( ______ )
 
 //#define _BSNUM ( LT(_DUAL_NUMPAD, KC_BSPC) )
 //#define _BSNUM ( TD(TD_BSPC) )
 #define _BSNUM ( KC_BSPC )
-#define _Z_NUM ( LT(_NUMPAD, KC_Z) )
-#define _X_SGL ( LT(_SGL, KC_X) )
+#define _Z_NUM ( LT(_DUAL_NUMPAD, KC_Z) )
+#define _X_LFT ( LT(_LEFT, KC_X) )
 #define _CMA_F ( LT(_F_KEYS, KC_COMM) )
 #define _QSTMK ( LSFT(KC_SLSH) )
 
@@ -28,13 +30,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_LAYOUT_QWERTY] = KEYMAP(
 		  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,
 		  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,
-		_Z_NUM, _X_SGL,   KC_C,   KC_V,
+		_Z_NUM, _X_LFT,   KC_C,   KC_V,
 
           KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,
         KC_DOT,   KC_H,   KC_J,   KC_K,   KC_L,
                   KC_B,   KC_N,   KC_M, _CMA_F,
 
-        _BSNUM, KC_RGUI, CTL_T(KC_ESC),
+        _BSNUM, KC_LGUI, CTL_T(KC_ESC),
         SFT_T(KC_SPC), LT(_FN, KC_TAB), ALT_T(KC_ENT)),
 
 	[_LAYOUT_MOD_1] = KEYMAP(
@@ -62,13 +64,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ______, ______, ______),
 
 	[_DUAL_NUMPAD] = KEYMAP(
-        KC_MINUS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PLUS,
-          KC_DOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_0,
-         KC_COMM, KC_KP_1, KC_KP_2, KC_KP_3,
+        KC_MINUS, KC_7, KC_8, KC_9, KC_PLUS,
+          KC_DOT, KC_4, KC_5, KC_6, KC_0,
+         KC_COMM, KC_1, KC_2, KC_3,
 
-        KC_MINUS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PLUS,
-          KC_DOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_0,
-                  KC_KP_1, KC_KP_2, KC_KP_3,  ______,
+        KC_MINUS, KC_7, KC_8, KC_9, KC_PLUS,
+          KC_DOT, KC_4, KC_5, KC_6, KC_0,
+                  KC_1, KC_2, KC_3,  ______,
 
 		______, ______, ______,
 		______, ______, ______),
@@ -106,8 +108,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MS_BTN3, KC_MS_BTN1,   KC_MS_UP,  KC_MS_BTN2, ______,
                     KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, ______,
 
-              ______, ______,  LCTL(KC_ESC),
-        LSFT(KC_SPC), ______, LALT(KC_ENT)),
+              KC_DEL, KC_RGUI,  RCTL(KC_ESC),
+        RSFT(KC_SPC), ______, RALT(KC_ENT)),
 
 
 	[_SGL] = KEYMAP(
@@ -119,8 +121,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ______, ______, ______, ______, ______,
                 ______, ______, ______, ______,
 
-        KC_BSPC, KC_DEL, KC_ESC,
+        KC_BSPC, ______, KC_ESC,
          KC_SPC, KC_TAB, KC_ENT),
+
+
+	[_LEFT] = KEYMAP(
+        LCA(KC_1), LCA(KC_2),    KC__VOLDOWN, KC__MUTE, KC__VOLUP,
+		  KC_PAST,   KC_SLSH,        KC_MPRV,  KC_MPLY,   KC_MNXT,
+		   ______,    ______, LSFT(KC_MINUS), KC_MINUS,
+
+        ______, ______, ______, ______, ______,
+        ______, ______, ______, ______, ______,
+                ______, ______, ______, ______,
+
+        KC_DEL, KC_TAB, ALT_T(KC_ENT),
+        ______, ______, ______),
 };
 
 /*

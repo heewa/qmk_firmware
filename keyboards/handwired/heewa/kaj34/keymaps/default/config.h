@@ -12,4 +12,5 @@ enum layers {
     _FN,
     _F_KEYS,
     _SGL,
+    _LEFT,
 };
