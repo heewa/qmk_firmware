@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ______, ______, ______, ______, ______,
                 ______, ______, ______, ______,
 
-        KC_BSPC, ______, KC_ESC,
+        KC_BSPC, KC_DEL, KC_ESC,
          KC_SPC, KC_TAB, KC_ENT),
 };
 
