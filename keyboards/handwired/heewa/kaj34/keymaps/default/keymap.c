@@ -88,9 +88,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		______, ______, ______),
 
 	[_FN] = KEYMAP(
-		       KC_1,   KC_2,   KC_3,   KC_4,   KC_5,
-		     _QSTMK, ______, ______, ______, ______,
-        TG(_NUMPAD), _RESET, ______, ______,
+		  KC_1,   KC_2,   KC_3,   KC_4,   KC_5,
+		_QSTMK, ______, ______, ______, ______,
+        ______, _RESET, ______, ______,
 
            KC_6,    KC_7,    KC_8,   KC_9,     KC_0,
         KC_SCLN, KC_LEFT, KC_DOWN,  KC_UP, KC_RIGHT,
@@ -100,9 +100,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         SFT_T(KC_INS), ______, ______),
 
 	[_F_KEYS] = KEYMAP(
-		 KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,
-		KC_F11, KC_F12, _MWH_L, _MWH_U, _MWH_R,
-		______, _LAY_1, _LAY_2, _MWH_D,
+		           KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,
+		          KC_F11, KC_F12, _MWH_L, _MWH_U, _MWH_R,
+		TG(_DUAL_NUMPAD), _LAY_1, _LAY_2, _MWH_D,
 
              KC_F6,      KC_F7,      KC_F8,       KC_F9, KC_F10,
         KC_MS_BTN3, KC_MS_BTN1,   KC_MS_UP,  KC_MS_BTN2, ______,
