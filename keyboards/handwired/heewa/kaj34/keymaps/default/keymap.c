@@ -1,6 +1,6 @@
 #include "kb.h"
 
-#include "config.h"
+#include "km_config.h"
 #include "combos.h"
 #include "tapdance.h"
 

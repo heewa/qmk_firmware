@@ -1,6 +1,6 @@
 #pragma once
 
-#include "config.h"
+#include "km_config.h"
 #include "tapdance.h"
 
 void td_finish__reset(qk_tap_dance_state_t *state, void *user_data) {

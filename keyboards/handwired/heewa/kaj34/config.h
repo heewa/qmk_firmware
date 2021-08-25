@@ -3,6 +3,7 @@
 #include "config_common.h"
 
 #define COMBO_TERM 20
+#define COMBO_COUNT 21
 
 #define TAPPING_FORCE_HOLD_PER_KEY
 #define TAPPING_PERMISSIVE_HOLD_PER_KEY
