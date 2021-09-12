@@ -8,4 +8,6 @@
   #include "rev2.h"
 #elif defined(KEYBOARD_handwired_heewa_kaj34_rev3)
   #include "rev3.h"
+#elif defined(KEYBOARD_handwired_heewa_kaj34_rev5)
+  #include "rev5.h"
 #endif
