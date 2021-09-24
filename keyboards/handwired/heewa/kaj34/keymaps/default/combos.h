@@ -21,9 +21,9 @@ const uint16_t PROGMEM doth_combo[] = {KC_DOT, KC_H, COMBO_END};
 const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM bn_combo[] = {KC_B, KC_N, COMBO_END};
 const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
-const uint16_t PROGMEM kp_23_combo[] = {KC_KP_2, KC_KP_3, COMBO_END};
-const uint16_t PROGMEM kp_45_combo[] = {KC_KP_4, KC_KP_5, COMBO_END};
-const uint16_t PROGMEM kp_56_combo[] = {KC_KP_5, KC_KP_6, COMBO_END};
+const uint16_t PROGMEM kp_23_combo[] = {KC_2, KC_3, COMBO_END};
+const uint16_t PROGMEM kp_45_combo[] = {KC_4, KC_5, COMBO_END};
+const uint16_t PROGMEM kp_56_combo[] = {KC_5, KC_6, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     // Left Row 1
