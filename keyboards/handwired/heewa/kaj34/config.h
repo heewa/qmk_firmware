@@ -14,6 +14,11 @@
 /* USB Device descriptor parameter */
 #define DESCRIPTION     keyboard
 
+#define MOUSEKEY_DELAY 0
+#define MOUSEKEY_INTERVAL 16
+#define MOUSEKEY_MAX_SPEED 7
+#define MOUSEKEY_TIME_TO_MAX 60
+
 /* number of backlight levels */
 
 #ifdef BACKLIGHT_PIN
