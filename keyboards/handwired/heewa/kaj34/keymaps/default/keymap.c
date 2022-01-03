@@ -134,7 +134,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ______, ______, ______, ______, ______,
                 ______, ______, ______, ______,
 
-        KC_DEL, KC_TAB, ALT_T(KC_ENT),
+        KC_SPC, KC_TAB, ALT_T(KC_ENT),
         ______, ______, ______),
 };
 
