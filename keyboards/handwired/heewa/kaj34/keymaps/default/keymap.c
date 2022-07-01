@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_LEFT] = LAYOUT_ortho_3x12(
         LCA(KC_1), LCA(KC_2),    KC__VOLDOWN, KC__MUTE, KC__VOLUP,
 		  KC_PAST,   KC_SLSH,        KC_MPRV,  KC_MPLY,   KC_MNXT,
-		   ______,    ______, LSFT(KC_MINUS), KC_MINUS,
+		  KC_LGUI,    ______, LSFT(KC_MINUS), KC_MINUS,
 
         ______, ______, ______, ______, ______,
         ______, ______, ______, ______, ______,
