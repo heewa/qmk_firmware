@@ -28,7 +28,6 @@
   },
   "layouts": {
     "LAYOUT_ortho_3x12": {
-      "key_count": 34,
       "layout": [
         {"label": "q", "x": 0, "y": 0},
         {"label": "w", "x": 1, "y": 0},

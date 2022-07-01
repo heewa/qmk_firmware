@@ -11,9 +11,6 @@
 #define TAPPING_TERM_PER_KEY
 #define IGNORE_MOD_TAP_INTERRUPT
 
-/* USB Device descriptor parameter */
-#define DESCRIPTION     keyboard
-
 #define MOUSEKEY_DELAY 0
 #define MOUSEKEY_INTERVAL 16
 #define MOUSEKEY_MAX_SPEED 7
@@ -25,9 +22,6 @@
 #define BACKLIGHT_LEVELS 3
 #endif
 
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCING_DELAY 5
-
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 
@@ -38,9 +32,6 @@
 #define IS_COMMAND() ( \
     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
 )
-
-/* prevent stuck modifiers */
-#define PREVENT_STUCK_MODIFIERS
 
 #ifdef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS

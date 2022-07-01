@@ -27,7 +27,7 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-	[_LAYOUT_QWERTY] = KEYMAP(
+	[_LAYOUT_QWERTY] = LAYOUT_ortho_3x12(
 		  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,
 		  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,
 		_Z_NUM, _X_LFT,   KC_C,   KC_V,
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _BSNUM, KC_LGUI, CTL_T(KC_ESC),
         SFT_T(KC_SPC), LT(_FN, KC_TAB), ALT_T(KC_ENT)),
 
-	[_LAYOUT_MOD_1] = KEYMAP(
+	[_LAYOUT_MOD_1] = LAYOUT_ortho_3x12(
 		______, ______,   KC_D, ______,   KC_V,
 		______, ______,   KC_E,   KC_T, ______,
 		______, ______, ______,   KC_F,
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ______, ______, ______,
         ______, ______, ______),
 
-	[_LAYOUT_MOD_2] = KEYMAP(
+	[_LAYOUT_MOD_2] = LAYOUT_ortho_3x12(
 		______, ______, ______, ______, ______,
 		______, ______, ______, ______, ______,
 		______, ______, ______, ______,
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ______, ______, ______,
         ______, ______, ______),
 
-	[_DUAL_NUMPAD] = KEYMAP(
+	[_DUAL_NUMPAD] = LAYOUT_ortho_3x12(
         KC_MINUS, KC_7, KC_8, KC_9, KC_PLUS,
           KC_DOT, KC_4, KC_5, KC_6, KC_0,
          KC_COMM, KC_1, KC_2, KC_3,
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		______, ______, ______,
 		______, ______, ______),
 
-	[_NUMPAD] = KEYMAP(
+	[_NUMPAD] = LAYOUT_ortho_3x12(
 		LCA(KC_1),   LCA(KC_2),   ______,    ______, ______,
 	  	   ______, KC__VOLDOWN, KC__MUTE, KC__VOLUP, ______,
 		   ______,     KC_MPRV,  KC_MPLY,   KC_MNXT,
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		______, ______, ______,
 		______, ______, ______),
 
-	[_FN] = KEYMAP(
+	[_FN] = LAYOUT_ortho_3x12(
 		  KC_1,   KC_2,   KC_3,   KC_4,   KC_5,
 		_QSTMK, ______, ______, ______, ______,
         ______, _RESET, ______, ______,
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_DEL, ______, ______,
         RSFT(KC_SPC), ______, ______),
 
-	[_F_KEYS] = KEYMAP(
+	[_F_KEYS] = LAYOUT_ortho_3x12(
 		           KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,
 		          KC_F11, KC_F12, _MWH_L, _MWH_U, _MWH_R,
 		TG(_DUAL_NUMPAD), _LAY_1, _LAY_2, _MWH_D,
@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_INS,  ______, RALT(KC_ENT)),
 
 
-	[_SGL] = KEYMAP(
+	[_SGL] = LAYOUT_ortho_3x12(
 		______, ______, ______, ______, ______,
 		______, ______, ______, ______, ______,
 		______, ______, ______, ______,
@@ -125,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_SPC, KC_TAB, KC_ENT),
 
 
-	[_LEFT] = KEYMAP(
+	[_LEFT] = LAYOUT_ortho_3x12(
         LCA(KC_1), LCA(KC_2),    KC__VOLDOWN, KC__MUTE, KC__VOLUP,
 		  KC_PAST,   KC_SLSH,        KC_MPRV,  KC_MPLY,   KC_MNXT,
 		   ______,    ______, LSFT(KC_MINUS), KC_MINUS,
@@ -177,10 +177,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
 
 	return true;
-}
-
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
-	return MACRO_NONE;
 }
 
 void matrix_init_user(void) {
