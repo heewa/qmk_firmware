@@ -3,7 +3,6 @@
 #include "kb.h"
 
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
-const uint16_t PROGMEM mc_combo[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
 const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
