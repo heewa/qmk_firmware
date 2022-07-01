@@ -19,3 +19,10 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         default: return TAPPING_TERM;
     }
 }
+
+uint16_t get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SFT_T(KC_SPC): return true;
+        default: return false;
+    }
+}
