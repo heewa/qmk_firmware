@@ -3,7 +3,7 @@
 
 #include "quantum.h"
 
-#define LAYOUT( \
+#define LAYOUT_ortho_3x12( \
 	K00, K01, K02, K03, K04, \
 	K20, K21, K22, K23, K24, \
 	K40, K41, K42, K43, \
@@ -23,5 +23,7 @@
       KC_NO, K50,   K51,   K52,   K53, \
       K61,  K71 }  \
 }
+
+#define LAYOUT LAYOUT_ortho_3x12
 
 #endif
