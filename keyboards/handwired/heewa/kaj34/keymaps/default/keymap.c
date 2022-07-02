@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_DOT,   KC_H,   KC_J,   KC_K,   KC_L,
                   KC_B,   KC_N,   KC_M, _CMA_F,
 
-        _BSNUM, RGUI_T(KC_LGUI), CTL_T(KC_ESC),
+        _BSNUM, KC_RGUI, CTL_T(KC_ESC),
         SFT_T(KC_SPC), LT(_FN, KC_TAB), ALT_T(KC_ENT)),
 
 	[_LAYOUT_MOD_1] = LAYOUT_ortho_3x12(
@@ -146,10 +146,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #include "per_key_conf.c"
 #include "tapdance.c"
 
+#define GUI_TAP_MS 200
+static uint32_t gui_timer = 0;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // handle reverse shifted keys
-    uint8_t mod_state = get_mods();
+    uint8_t mod_state;
+
     switch (keycode) {
+        // Fix Gnome behavior by only sending RGUI tap if key let go quickly
+        case KC_RGUI:
+            if (record->event.pressed) {
+                gui_timer = timer_read32();
+            } else if (timer_elapsed32(gui_timer) < GUI_TAP_MS) {
+                unregister_code(KC_RGUI);
+                tap_code_delay(KC_LGUI, 80);
+                return false;
+            }
+
+            break;
+
+        // handle reverse shifted keys
         case KC_1:
         case KC_2:
         case KC_3:
@@ -160,6 +176,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_8:
         case KC_9:
         case KC_0:
+
+            mod_state = get_mods();
 
             if (record->event.pressed && get_highest_layer(layer_state) == _FN) {
                 if (mod_state & MOD_MASK_SHIFT) {
