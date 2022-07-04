@@ -152,12 +152,18 @@ static uint32_t gui_timer = 0;
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     uint8_t mod_state;
 
+    // If another key pressed, don't switch GUI keys
+    if (gui_timer && record->event.pressed) {
+        gui_timer = 0;
+    }
+
     switch (keycode) {
         // Fix Gnome behavior by only sending RGUI tap if key let go quickly
         case KC_RGUI:
             if (record->event.pressed) {
                 gui_timer = timer_read32();
-            } else if (timer_elapsed32(gui_timer) < GUI_TAP_MS) {
+            } else if (gui_timer && timer_elapsed32(gui_timer) < GUI_TAP_MS) {
+                gui_timer = 0;
                 unregister_code(KC_RGUI);
                 tap_code_delay(KC_LGUI, 80);
                 return false;
