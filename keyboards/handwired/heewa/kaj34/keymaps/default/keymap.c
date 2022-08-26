@@ -39,6 +39,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _BSNUM, KC_RGUI, CTL_T(KC_ESC),
         SFT_T(KC_SPC), LT(_FN, KC_TAB), ALT_T(KC_ENT)),
 
+	[_GAME_1] = LAYOUT_ortho_3x12(
+		  KC_I,   KC_Q,   KC_W,   KC_E,   KC_R,
+	      KC_G,	  KC_A,   KC_S,   KC_D,   KC_F,
+		_Z_NUM,   KC_X,   KC_C,   KC_V,
+
+          KC_Y,   KC_U,   KC_T,   KC_O,   KC_P,
+        KC_DOT,   KC_H,   KC_J,   KC_K,   KC_L,
+                  KC_B,   KC_N,   KC_M, _CMA_F,
+
+        KC_SPC, KC_BSPC, KC_ESC,
+        SFT_T(KC_SPC), LT(_FN, KC_TAB), KC_ENT),
+
 	[_LAYOUT_MOD_1] = LAYOUT_ortho_3x12(
 		______, ______,   KC_D, ______,   KC_V,
 		______, ______,   KC_E,   KC_T, ______,
@@ -105,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		TG(_DUAL_NUMPAD), _LAY_1, _LAY_2, _MWH_D,
 
              KC_F6,      KC_F7,      KC_F8,       KC_F9, KC_F10,
-        KC_MS_BTN3, KC_MS_BTN1,   KC_MS_UP,  KC_MS_BTN2, ______,
+        KC_MS_BTN3, KC_MS_BTN1,   KC_MS_UP,  KC_MS_BTN2, TG(_GAME_1),
                     KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, ______,
 
         KC_DEL, KC_RGUI,  RCTL(KC_ESC),
