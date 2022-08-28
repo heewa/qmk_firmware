@@ -9,4 +9,3 @@
 /* key matrix pins */
 #define MATRIX_ROW_PINS { E6, B4, B5, B3, B2, B6 }
 #define MATRIX_COL_PINS { F6, D4, F7, C6, B1, D7 }
-#define UNUSED_PINS { D3, D2, D1, D0, F4, F5 }

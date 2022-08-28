@@ -12,4 +12,3 @@
     F6, F7, B1, F5, B6, \
     C6, D0, D7, D4, E6, \
     B3, B5 }
-#define UNUSED_PINS { D1 }
