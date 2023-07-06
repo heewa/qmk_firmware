@@ -1,7 +1,5 @@
 #pragma once
 
-#include "config_common.h"
-
 #define COMBO_TERM 20
 #define COMBO_COUNT 21
 

@@ -33,8 +33,8 @@ combo_t key_combos[COMBO_COUNT] = {
     // Right Row 1
     COMBO(yu_combo, KC_GT),
     COMBO(ui_combo, KC_RBRC),
-    COMBO(io_combo, KC_BSLASH),
-    COMBO(op_combo, LSFT(KC_BSLASH)),
+    COMBO(io_combo, KC_BACKSLASH),
+    COMBO(op_combo, LSFT(KC_BACKSLASH)),
 
     // Left Row 2
     COMBO(as_combo, LSFT(KC_GRV)),

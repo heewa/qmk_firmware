@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[_NUMPAD] = LAYOUT_ortho_3x12(
 		LCA(KC_1),   LCA(KC_2),   ______,    ______, ______,
-	  	   ______, KC__VOLDOWN, KC__MUTE, KC__VOLUP, ______,
+	  	   ______, KC_KB_VOLUME_DOWN, KC_KB_MUTE, KC_KB_VOLUME_UP, ______,
 		   ______,     KC_MPRV,  KC_MPLY,   KC_MNXT,
 
         KC_MINUS, KC_7, KC_8, KC_9, KC_PLUS,
@@ -138,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 	[_LEFT] = LAYOUT_ortho_3x12(
-        LCA(KC_1), LCA(KC_2),    KC__VOLDOWN, KC__MUTE, KC__VOLUP,
+        LCA(KC_1), LCA(KC_2),    KC_KB_VOLUME_DOWN, KC_KB_MUTE, KC_KB_VOLUME_UP,
 		  KC_PAST,   KC_SLSH,        KC_MPRV,  KC_MPLY,   KC_MNXT,
 		  KC_LGUI,    ______, LSFT(KC_MINUS), KC_MINUS,
 

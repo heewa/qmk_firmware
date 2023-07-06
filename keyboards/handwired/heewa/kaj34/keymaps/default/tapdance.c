@@ -3,7 +3,7 @@
 #include "km_config.h"
 #include "tapdance.h"
 
-void td_finish__reset(qk_tap_dance_state_t *state, void *user_data) {
+void td_finish__reset(tap_dance_state_t *state, void *user_data) {
     if (state->count >= 4) {
         reset_keyboard();
         reset_tap_dance(state);
@@ -12,7 +12,7 @@ void td_finish__reset(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_press__bspc(qk_tap_dance_state_t *state, void *user_data) {
+void td_press__bspc(tap_dance_state_t *state, void *user_data) {
     if (state->count < 1) {
         return;
     }
@@ -41,7 +41,7 @@ void td_press__bspc(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_finish__bspc(qk_tap_dance_state_t *state, void *user_data) {
+void td_finish__bspc(tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
         // A single press was ignored, so either hold or tap
         if (!state->pressed || state->interrupted) {
@@ -59,7 +59,7 @@ void td_finish__bspc(qk_tap_dance_state_t *state, void *user_data) {
     // leave the else state alone too, since it could be either a tap or hold
 }
 
-void td_reset__bspc(qk_tap_dance_state_t *state, void *user_data) {
+void td_reset__bspc(tap_dance_state_t *state, void *user_data) {
     // Whatever, just turn it all off...
     layer_off(_DUAL_NUMPAD);
     unregister_code(KC_BSPC);
