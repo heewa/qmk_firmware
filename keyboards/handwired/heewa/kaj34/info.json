@@ -10,7 +10,7 @@
   "diode_direction": "COL2ROW",
   "usb": {
     "vid": "0xBAAF",
-    "pid": "0x4200"
+    "device_version": "1.6.0"
   },
   "features": {
     "audio": false,

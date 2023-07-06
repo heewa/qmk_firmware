@@ -2,6 +2,8 @@
 
 #include "kb.h"
 
+#define COMBO_COUNT 21
+
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
