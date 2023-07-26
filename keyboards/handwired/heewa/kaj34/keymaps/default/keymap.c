@@ -108,8 +108,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_SCLN, KC_LEFT, KC_DOWN,  KC_UP, KC_RIGHT,
                  KC_HOME, KC_PGDN, KC_PGUP, KC_END,
 
-              KC_DEL, ______, ______,
-        RSFT(KC_SPC), ______, ______),
+        KC_DEL, ______, ______,
+        ______, ______, ______),
 
 	[_F_KEYS] = LAYOUT_ortho_3x12(
 		           KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,
