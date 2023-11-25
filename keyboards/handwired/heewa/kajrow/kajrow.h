@@ -1,9 +1,8 @@
-#ifndef KB_H
-#define KB_H
+#pragma once
 
 #include "quantum.h"
 
-#define KEYMAP( \
+#define LAYOUT( \
 	K00, K01, K02, K03, K04, \
 	K10, K11, K12, K13, K14, \
 	K20, K21, K22, K23, K24, \
@@ -24,5 +23,3 @@
 	{   K29,   K28,   K27,   K26,   K25,   K210,   K211, KC_NO }, \
 	{   K39,   K38,   K37,   K36,   K35,   K310,   K311,   K312 } \
 }
-
-#endif

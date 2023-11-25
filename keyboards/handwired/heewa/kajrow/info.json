@@ -1,0 +1,106 @@
+{
+  "keyboard_name": "KajRow",
+  "url": "",
+  "manufacturer": "Heewa Barfchin",
+  "maintainer": "heewa",
+  "processor": "atmega32u4",
+  "bootloader": "caterina",
+  "pin_compatible": "promicro",
+  "diode_direction": "COL2ROW",
+  "width": 8,
+  "height": 8,
+  "usb": {
+    "vid": "0xBAAF",
+    "pid": "0x4202",
+    "device_version": "1.1.0"
+  },
+  "qmk": {
+    "tap_keycode_delay": 1
+  },
+  "tapping": {
+    "term": 200,
+    "permissive_hold": true
+  },
+  "features": {
+    "audio": false,
+    "backlight": false,
+    "bootmagic_lite": true,
+    "combo": false,
+    "command": false,
+    "console": false,
+    "extrakey": true,
+    "mousekey": false,
+    "nkro": true,
+    "rgblight": false,
+    "sleep_led": false,
+    "tap_dance": true
+  },
+  "layouts": {
+      "LAYOUT": {
+          "layout": [
+              {"label": "1", "x": 0, "y": 0},
+              {"label": "2", "x": 0, "y": 0},
+              {"label": "3", "x": 0, "y": 0},
+              {"label": "4", "x": 0, "y": 0},
+              {"label": "5", "x": 0, "y": 0},
+              {"label": "6", "x": 0, "y": 0},
+              {"label": "7", "x": 0, "y": 0},
+              {"label": "8", "x": 0, "y": 0},
+              {"label": "9", "x": 0, "y": 0},
+              {"label": "0", "x": 0, "y": 0},
+              {"label": "-", "x": 0, "y": 0},
+              {"label": "=", "x": 0, "y": 0},
+              {"label": "\\", "x": 0, "y": 0},
+
+              {"label": "q", "x": 0, "y": 0},
+              {"label": "w", "x": 1, "y": 0},
+              {"label": "e", "x": 2, "y": 0},
+              {"label": "r", "x": 3, "y": 0},
+              {"label": "t", "x": 4, "y": 0},
+              {"label": "y", "x": 5, "y": 0},
+              {"label": "u", "x": 6, "y": 0},
+              {"label": "i", "x": 7, "y": 0},
+              {"label": "o", "x": 0, "y": 1},
+              {"label": "p", "x": 1, "y": 1},
+              {"label": "[", "x": 1, "y": 1},
+              {"label": "]", "x": 1, "y": 1},
+
+              {"label": "a", "x": 2, "y": 1},
+              {"label": "s", "x": 3, "y": 1},
+              {"label": "d", "x": 4, "y": 1},
+              {"label": "f", "x": 5, "y": 1},
+              {"label": "g", "x": 6, "y": 1},
+              {"label": "h", "x": 0, "y": 2},
+              {"label": "j", "x": 1, "y": 2},
+              {"label": "k", "x": 2, "y": 2},
+              {"label": "l", "x": 3, "y": 2},
+              {"label": ":", "x": 3, "y": 2},
+              {"label": "'", "x": 3, "y": 2},
+              {"label": "^", "x": 3, "y": 2},
+
+              {"label": "`", "x": 4, "y": 2},
+              {"label": "z", "x": 4, "y": 2},
+              {"label": "x", "x": 5, "y": 2},
+              {"label": "c", "x": 6, "y": 2},
+              {"label": "v", "x": 7, "y": 2},
+              {"label": "b", "x": 0, "y": 3},
+              {"label": "n", "x": 1, "y": 3},
+              {"label": "m", "x": 2, "y": 3},
+              {"label": ",", "x": 3, "y": 3},
+              {"label": ".", "x": 3, "y": 3},
+              {"label": "/", "x": 3, "y": 3},
+              {"label": "<", "x": 3, "y": 3},
+              {"label": "v", "x": 3, "y": 3},
+              {"label": ">", "x": 3, "y": 3},
+
+              {"label": "Backspace8", "x": 4, "y": 3},
+              {"label": "Super", "x": 5, "y": 3},
+              {"label": "Esc", "x": 6, "y": 3},
+
+              {"label": "Tab", "x": 7, "y": 3},
+              {"label": "Enter", "x": 0, "y": 4},
+              {"label": "Space", "x": 1, "y": 4}
+          ]
+      }
+  }
+}
